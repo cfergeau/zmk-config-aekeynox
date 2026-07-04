@@ -4,7 +4,7 @@ include:
   ###
   # Keyboard Configurations
   ##
-  
+
   # default config
   - board: quacken_flex/rp2040
     artifact-name: default
@@ -33,7 +33,7 @@ include:
   ###
   # Layout Emulations
   ##
-  
+
   # Dvorak emulation on Qwerty
   - board: quacken_flex/rp2040
     artifact-name: qwerty_to_dvorak
@@ -58,3 +58,15 @@ include:
   - board: quacken_flex/rp2040
     artifact-name: qwerty_intl_to_lafayette
     cmake-args: -DDTS_EXTRA_CPPFLAGS="-DCI_IGNORE_USER_SETTINGS;-DKB_LAYOUT_QWERTY_INTL;-DKB_EMULATION_QWERTY_LAFAYETTE"
+
+  # Bepo + HT_NONE
+  - board: xiao_ble//zmk
+    shield: totem_left
+    artifact-name: tester_totem_bepo_ez
+    cmake-args: -DDTS_EXTRA_CPPFLAGS="-DIGNORE_USER_SETTINGS;-DKB_LAYOUT_BEPO;-DHT_NONE"
+
+  # Bepolar + HT_TWO_THUMB_KEYS
+  - board: xiao_ble//zmk
+    shield: totem_left
+    artifact-name: tester_totem_bepolar_2tk
+    cmake-args: -DDTS_EXTRA_CPPFLAGS="-DIGNORE_USER_SETTINGS;-DKB_LAYOUT_BEPOLAR;-DHT_TWO_THUMB_KEYS"

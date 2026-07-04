@@ -14,6 +14,8 @@
   >;
 };
 
+#error "BEPO!!"
+
 / {
   behaviors {
     dead_key: dead_key {
